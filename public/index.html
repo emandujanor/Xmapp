@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>X-mapp</title>
-    <link rel="icon" sizes="16x16" href="public/assets/img/xmapp.png">
+    <link rel="icon" sizes="16x16" href="assets/img/xmapp.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="css/main.css" type="text/css" rel="stylesheet">
@@ -13,7 +13,7 @@
   </head>
   <body>
 <!-- NAVBAR     -->
-    <nav class="uk-navbar-container uk-background-secundary" uk-navbar>
+    <nav id="nav" class="uk-navbar-container" uk-navbar>
          <img src="assets/img/xmapp_logo.png" alt="logo" class="uk-align-left logo">
          <div class="uk-navbar-right">
              <ul class="uk-navbar-nav">
@@ -21,7 +21,7 @@
                  <li>
 
                      <a href="#"><div id="avatar"></div></a>
-                     <div class="uk-navbar-dropdown">
+                     <div class="color-black uk-navbar-dropdown">
                          <ul class="uk-nav uk-navbar-dropdown-nav text-white">
                             <li><a href="#">Iniciar Sesión</a></li>
                              <li><a href="#">Registrate</a></li>
@@ -52,39 +52,29 @@
     </section>
 
 <!-- FOOTER -->
-    <footer id="footer" class="color-gray container-footer">
+    <footer id="footer" class="color-gray">
+    	<div class="columna">		
         <ul class="text-white uk-margin-medium-top">
             <li class="text-white">SERVICIO AL CLIENTE</li>
             <li><a class="text-white uk-text-meta">Preguntas Frecuentes</a></li>
             <li><a class="text-white">Garantía de Servicio</a></li>
         </ul>
+        </div>
+        <div class="columna">
         <ul class="text-white uk-margin-medium-top">
           <li class="text-white uk-text-meta">POLITICAS</li>
           <li><a class="text-white">Terminos y Condiciones</a></li>
           <li><a class="text-white">Privacidad</a></li>
         </ul>
-        <ul class="text-white uk-margin-medium-top">
-            <li class="text-white">SOLUCIONES CORPORATIVAS</li>
-            <li><a href="" class="text-white">Regalos Corporativos</a></li>
-            <li><a href="" class="text-white">Cotiza tu iniciativa</a></li>
-            <li></li>
-        </ul>
-        <div>
-            <p class="text-white uk-margin-top">Inscríbete a nuestro Newsletter para recibir grandes ideas...</p>
-            <input type="text">
-            <a href="#" class="uk-button uk-button-default button-style rss-btn uk-button-small">Suscríbete</a>
-            <div class="social-media uk-margin-top">
+       </div>
+        <div class="columna">
+            <div class="social-media uk-margin-medium-top uk-align-center">
                 <a href="#" uk-icon="icon: twitter; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
                 <a href="#" uk-icon="icon: facebook; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
-                <a href="#" uk-icon="icon: linkedin; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
                 <a href="#" uk-icon="icon: youtube; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
-                <a href="#" uk-icon="icon: rss; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
-            </div>
-            <div class="tel uk-margin-top">
-                <span uk-icon="icon: phone"></span>
-                <span>5292 5707 / 01 55 5292-5407</span>
             </div>
         </div>
+        <div class="limpiar"> </div>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>

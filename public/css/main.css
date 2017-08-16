@@ -7,7 +7,7 @@ body{
   background-color: #d60116;
 }
 .color-black{
-  background-color: #01aab6;
+  background-color: #000;
 }
 .color-gray{
   background-color: #635f5f;
@@ -85,4 +85,32 @@ form{
     width: 28px;
     margin: 0 10%;
   }
+}
+#nav{
+background-color:#000;
+color:#fff;
+border-bottom: solid 5px #FF0000;
+}
+.columna{
+	width:28%;
+	height:auto;
+	margin-left:5vw;
+	float:left;
+	display:inline-block;
+}
+@media (max-width: 420px){
+.columna{
+	width:80vw;
+	height:auto;
+	margin-left:15vw;
+	float:left;
+	display:inline-block;
+}
+}
+.limpiar{
+	clear:both;
+	margin-bottom:2wh;
+}
+footer>div>ul>li{
+	list-style:none;
 }
