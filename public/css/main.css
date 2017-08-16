@@ -147,6 +147,9 @@ footer>div>ul>li{
 #contenido_busqueda{
   height: 100%;
 }
+.uk-offcanvas-bar .uk-button-default #mostrar-result {
+  background-color: rgb(214, 1, 22);
+}
 
 /*MEDIA QUERY*/
 @media (max-width: 420px){
