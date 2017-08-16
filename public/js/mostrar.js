@@ -1,7 +1,9 @@
-var cargarPagina = function () {
-    mastraEvnetoF
-    ();
+var cargarPagina = function () {    
+    mastraEvnetoF    ();
     obtenerEventos();
+    $("#mostrar-busqueda").click(searEvent);
+    $("#mostrar-result").click(buscarD);
+	
 
 };
 var eventos = [];
@@ -32,19 +34,19 @@ var obtenerEventos = function () {
         var activities = data;
         $.each(activities, function(key,val) {
             eventos.push(val);
-        });
-
-    });
+        });    
+    });     
+     
 
 };
 var mostrarEvent = function (events) {
-    var plantillaFinal = "";
+    var plantillaFinal2 = "";
 	events.forEach(function (event) {
-        plantillaFinal += plantillaBusquedaEvent.replace("__nombre__", event.nombre)
+        plantillaFinal2 += plantillaEvent.replace("__nombre__", event.nombre)
         .replace("__descripcion__", event.descripcion)
-        .replace("__imagen__", event.costo);
+        .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
 	});
-	$("#contenido_busqueda").html(plantillaFinal);
+	$("#contenido_busqueda").html(plantillaFinal2);
 };
 var filtrarEventos = function (e) {
     e.preventDefault();
@@ -67,5 +69,23 @@ var mastraEvnetoF = function () {
     var evento =JSON.parse(localStorage.getItem("lastname"));
     var data =evento[0];
     console.log(mostrarEventF(data));
+};
+var filtroEdades = function (e) {
+    e.preventDefault();
+    var criterioBusqueda = $("#select-edad").val();
+    console.log(criterioBusqueda);
+    var eventosFiltrados = eventos.filter(function (evento) {
+        return evento.edad.indexOf(criterioBusqueda) >= 0;
+    });
 }
+function searEvent() {
+    mostrarEvent(eventos);
+}
+function buscarD(e) {
+    e.preventDefault();
+    filtrarEdades();
+}
+
+
 $(document).ready(cargarPagina);
+
