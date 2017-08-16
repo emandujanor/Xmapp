@@ -2,7 +2,8 @@
       
 var cargarPagina = function () {    
     obtenerEventos();
-	$("#formulario").submit(filtrarEventos);
+    $("#formulario").submit(filtrarEventos);
+    
 };
 var eventos = [];
 var plantillaContacto = '<article class="row contact">' +
