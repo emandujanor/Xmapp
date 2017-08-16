@@ -9,11 +9,7 @@ let cargarLugares =  () => {
     $.getJSON(url, function (response) {
         console.log(response); //con esto me da la cantidad de objetos.
         let lugares = response;
-        console.log(lugares[1]);
         mostrarLugares(lugares);
-        
-
-
     });
 
 };
