@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>X-mapp</title>
+    <link rel="icon" sizes="16x16" href="../assets/img/xmapp.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <section id="container-login" class="uk-padding-large uk-padding-remove-top uk-padding-remove-bottom uk-margin-medium-top uk-flex-center uk-flex-middle">
+        <div class="uk-align-center img-small">
+          <img src="../assets/img/xmapp.svg" alt="x-mapp">
+        </div>
+        <div class=" title uk-text-center uk-heading-line uk-padding-large uk-padding-remove-top  uk-padding-remove-bottom">
+          <h2 class="texto">INICIO DE SESIÓN</h2>
+        </div>
+      	<article class="uk-grid uk-child-width-1-2@m uk-child-width-1-1@s uk-padding  uk-padding-remove-top" uk-grid>
+          <form class="uk-flex-center uk-flex-middle uk-flex uk-padding-large uk-padding-remove-bottom uk-padding-remove-top">
+              <div>
+                 <button class="uk-button uk-button-default uk-width-1-1@s uk-margin-bottom fb-login color-facebook text-white">
+                   <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook
+                 </button>
+                 <button id="go-login1" class="uk-button uk-button-default uk-width-1-1@s uk-margin-small-bottom go-login color-google text-white">
+                   <i class="fa fa-google-plus-official" aria-hidden="true"></i> Gmail
+                 </button>
+              </div>
+          </form>
+          <form  id="regist" class="uk-padding-large uk-padding-remove-bottom uk-padding-remove-top">
+               <input type="text" placeholder="Usuario" class="uk-input uk-width-1-1@s"><br>
+               <input type="password" placeholder="Contraseña" class="uk-input uk-margin-top uk-width-1-1@s">
+               <div>
+                 <a href="views/home.html" id="login" class="uk-button uk-button-primary uk-width-1-1@s uk-margin-small-bottom uk-margin-top" > Iniciar sesión</a>
+               </div>
+          </form>
+      	</article>
+        <div class="uk-text-center uk-text-lead">
+          <a href="registro.html" target="_self">Registrate</a>
+        </div>
+    </section>
+
+  </body>
+</html>

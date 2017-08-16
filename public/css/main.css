@@ -36,6 +36,9 @@ body{
 .opacity-dark{
   background: rgba(0, 0, 0, 0.5);
 }
+.img-small{
+  width: 15%;
+}
 .uk-padding-large{
   padding: 10%;
 }
@@ -75,7 +78,22 @@ form{
 #bg-home {
   background-image: url("../assets/img/landscape-2082827_1920.jpg");
 }
-
+#login:hover{
+  background: transparent;
+  border: 1px solid #4f544f;
+  color: #4f544f;
+}
+@media (max-width: 420px){
+  .img-small {
+    width: 100%;
+  }
+}
+@media (min-width: 640px){
+  #regist .uk-width-1-1\@s {
+      width: 52%;
+      margin-left: 24%;
+  }
+}
 @media (max-width: 736px){
   .uk-search-large .uk-search-input, .texto{
     font-size: 1.5em;
@@ -84,5 +102,15 @@ form{
   .uk-search-large .uk-search-icon{
     width: 28px;
     margin: 0 10%;
+  }
+}
+@media (max-width: 780px){
+  .img-small {
+    width: 25%;
+  }
+}
+@media (min-width: 1024px){
+  #regist .uk-width-1-1\@s {
+    width: 100%;
   }
 }
