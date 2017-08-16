@@ -1,22 +1,32 @@
+<<<<<<< HEAD
+var cargarPagina = function () {
+    mastraEvnetoF    ();
+    obtenerEventos();
+    $("#mostrar-busqueda").click(searEvent);
+    $("#mostrar-result").click(buscarD);
+
+
+=======
 var cargarPagina = function () {    
     mastraEvnetoF();
     obtenerEventos();
     $("#mostrar-busqueda").click(searEvent);      
+>>>>>>> upstream/master
 };
 var eventos = [];
 var plantillaEvent =
 '<div class="key-reserva" data-key="__key__">'+
   '<div class="uk-card uk-card-default uk-card-hover">'+
     '<div class="uk-card-header">'+
-        '<div class="uk-grid-small uk-flex-middle" uk-grid>'+
-            '<div class="uk-width-auto">'+
+        '<div class="uk-align-center">'+
+            '<div class="uk-text-center uk-margin-bottom">'+
                 '<img  width="140" height="140" src="__imagen__">'+
             '</div>'+
-            '<div class="uk-width-expand">'+
+            '<div>'+
               '<h3 class="uk-card-title uk-margin-remove-bottom">__nombre__</h3>'+
-              '<p class="uk-text-meta uk-margin-remove-top">$__fecha__</p>'+
+              '<p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">__fecha__</p>'+
             '</div>'+
-        '</div>'+
+         '</div>'+
     '</div>'+
     '<div class="uk-card-body">'+
        ' <p>__descripcion__</p>'+
@@ -31,9 +41,9 @@ var obtenerEventos = function () {
         var activities = data;
         $.each(activities, function(key,val) {
             eventos.push(val);
-        });    
-    });     
-     
+        });
+    });
+
 
 };
     var mostrarEvent = function (events) {
@@ -74,4 +84,3 @@ function searEvent() {
 
 
 $(document).ready(cargarPagina);
-
