@@ -27,8 +27,6 @@ var obtenerEventos = function () {
     });
     
 };
-console.log(eventos);
-
 var mostrarEvent = function (events) {
     var plantillaFinal = "";
 	events.forEach(function (event) {
@@ -45,6 +43,8 @@ var mostrarEvent = function (events) {
             var eventosFiltrados = eventos.filter(function (evento) {
                 return evento.nombre.toLowerCase().indexOf(criterioBusqueda) >= 0;
             });
-            mostrarEvent(eventosFiltrados);
+            console.log(eventosFiltrados)
+            localStorage.setItem("lastname", JSON.stringify(eventosFiltrados));
+            location.href = "/views/search.html";
         };
 $(document).ready(cargarPagina);

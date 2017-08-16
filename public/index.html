@@ -33,10 +33,12 @@
 <!-- SEARCH -->
     <section id="bg-home" class="uk-background-center-center uk-background-cover uk-height-viewport">
       <section class="uk-card uk-padding-large uk-flex-middle">
-          <div class="uk-card-body opacity-dark">
-            <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white opacity-dark">
+          <div class="uk-card-body opacity-
+          dark">
+            <form id="formulario" class="uk-search uk-search-large uk-margin-large uk-align-center text-white opacity-dark">
                 <span uk-search-icon class="text-white"></span>
-                <input class="uk-search-input text-white" type="search" placeholder="Buscar...">
+                <input id="search" class="uk-search-input text-white" type="search" placeholder="Buscar...">
+                <button type="submit" style="display:none"></button>
             </form>
             <div class="uk-text-center uk-heading-line">
               <h2 class="text-white texto">Aventuras cerca de tí</h2>
@@ -79,12 +81,14 @@
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCze7uMn_qigLWe16belwal9difq6ZqJwQ"
     async defer></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/mapa.js" ></script>
+    <script src="js/sort.js" ></script>
   </body>
 </html>
