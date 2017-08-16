@@ -1,4 +1,88 @@
+/*COMMON*/
+body{
+  margin-top: 0px;
+  font-family: 'Dosis', sans-serif;
+}
+.color-red{
+  background-color: #d60116;
+}
+.color-black{
+  background-color: #01aab6;
+}
+.color-gray{
+  background-color: #635f5f;
+}
+.color-lightGray{
+  background: #d4d9d8;
+}
+.color-google{
+  background: #DB4337;
+}
+.color-facebook{
+  background: #3B5998;
+}
+.text-white{
+  color: #ffffff;
+}
+.text-red{
+  color: #d60116;
+}
+.text-gray{
+  color: #4f544f;
+}
+.text-lightGray{
+  color: #838783;
+}
+.opacity-dark{
+  background: rgba(0, 0, 0, 0.5);
+}
+.uk-padding-large{
+  padding: 10%;
+}
+
+/*NAVBAR*/
+.logo{
+ margin: 10px;
+}
+#avatar{
+ width: 60px;
+ height:60px;
+ background-image: url("../assets/img/avatar.png");
+
+}
+#avatar:hover{
+ background-image: url("../assets/img/avatar_over.png");
+}
+.name{
+ margin-top:25px;
+}
+
+/*HOME*/
+#map{
+  height: 30vh;
+  background: gray;
+  padding: 10%;
+}
+.uk-search .uk-search-icon{
+  color: white;
+}
+.uk-search-large .uk-search-input{
+  font-size: 2rem;
+}
+form{
+  border-radius: 20px;
+}
 #bg-home {
   background-image: url("../assets/img/landscape-2082827_1920.jpg");
-  height: 100vh;
+}
+
+@media (max-width: 736px){
+  .uk-search-large .uk-search-input, .texto{
+    font-size: 1.5em;
+    height: 45px;
+  }
+  .uk-search-large .uk-search-icon{
+    width: 28px;
+    margin: 0 10%;
+  }
 }

@@ -9,33 +9,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link href="css/footer.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+<!-- NAVBAR     -->
+    <nav class="uk-navbar-container uk-background-secundary" uk-navbar>
+         <img src="assets/img/xmapp_logo.png" alt="logo" class="uk-align-left logo">
+         <div class="uk-navbar-right">
+             <ul class="uk-navbar-nav">
+                 <span class="name">Nombre del Usuario </span>
+                 <li>
 
-    <section id="bg-home" class="uk-background-fixed uk-background-center-center uk-background-cover">
-      <section class="uk-card">
-          <div class="uk-card-body transparent">
-            <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white">
+                     <a href="#"><div id="avatar"></div></a>
+                     <div class="uk-navbar-dropdown">
+                         <ul class="uk-nav uk-navbar-dropdown-nav text-white">
+                            <li><a href="#">Iniciar Sesión</a></li>
+                             <li><a href="#">Registrate</a></li>
+                         </ul>
+                     </div>
+                 </li>
+             </ul>
+         </div>
+     </nav>
+<!-- SEARCH -->
+    <section id="bg-home" class="uk-background-center-center uk-background-cover uk-height-viewport">
+      <section class="uk-card uk-padding-large uk-flex-middle">
+          <div class="uk-card-body opacity-dark">
+            <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white opacity-dark">
                 <span uk-search-icon class="text-white"></span>
-                <input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
+                <input class="uk-search-input text-white" type="search" placeholder="Buscar...">
             </form>
             <div class="uk-text-center uk-heading-line">
-              <h2 class="text-white">Aventuras cerca de tí</h2>
+              <h2 class="text-white texto">Aventuras cerca de tí</h2>
             </div>
             <div class="uk-align-center" >
-              <div>
-                  <div class="uk-card uk-card-hover uk-card-default">
-                      <div class="uk-card-media-top uk-text-center uk-padding">
-                          <img src="../assets/img/scapp_logo.jpg" alt="">
-                      </div>
-                      <div class="uk-card-body">
-                          <h3 class="uk-card-title">Nombre del evento</h3>
-                          <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                      </div>
+              <div class="uk-padding-large uk-padding-remove-top">
+                  <div id="map">
+
                   </div>
               </div>
       </section>
     </section>
+
+<!-- FOOTER -->
+    <footer id="footer" class="color-gray container-footer">
+        <ul class="text-white uk-margin-medium-top">
+            <li class="text-white">SERVICIO AL CLIENTE</li>
+            <li><a class="text-white uk-text-meta">Preguntas Frecuentes</a></li>
+            <li><a class="text-white">Garantía de Servicio</a></li>
+        </ul>
+        <ul class="text-white uk-margin-medium-top">
+          <li class="text-white uk-text-meta">POLITICAS</li>
+          <li><a class="text-white">Terminos y Condiciones</a></li>
+          <li><a class="text-white">Privacidad</a></li>
+        </ul>
+        <ul class="text-white uk-margin-medium-top">
+            <li class="text-white">SOLUCIONES CORPORATIVAS</li>
+            <li><a href="" class="text-white">Regalos Corporativos</a></li>
+            <li><a href="" class="text-white">Cotiza tu iniciativa</a></li>
+            <li></li>
+        </ul>
+        <div>
+            <p class="text-white uk-margin-top">Inscríbete a nuestro Newsletter para recibir grandes ideas...</p>
+            <input type="text">
+            <a href="#" class="uk-button uk-button-default button-style rss-btn uk-button-small">Suscríbete</a>
+            <div class="social-media uk-margin-top">
+                <a href="#" uk-icon="icon: twitter; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+                <a href="#" uk-icon="icon: facebook; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+                <a href="#" uk-icon="icon: linkedin; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+                <a href="#" uk-icon="icon: youtube; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+                <a href="#" uk-icon="icon: rss; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+            </div>
+            <div class="tel uk-margin-top">
+                <span uk-icon="icon: phone"></span>
+                <span>5292 5707 / 01 55 5292-5407</span>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
