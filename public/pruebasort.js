@@ -21,12 +21,13 @@ let cargarLugares =  () => {
 
 let mostrarLugares = (lugares)=>{
     let plantillaFinal = " ";
-    lugares.forEach((lugar, index)=>{
-        plantillaFinal += plantillaReserva.replace("__nombre__",lugar.nombre)
-        .replace("__costo__",lugar.costo).replace("__direccion__",lugar.direccion).replace("__edad__",lugar.edad);
+    lugares.forEach((lugar, index, obj)=>{
+        plantillaFinal += plantillaReserva.replace("__nombre__", lugar.nombre)
+        .replace("__costo__", lugar.costo).replace("__direccion__", lugar.direccion).replace("__edad__",lugar.edad);
         
         
-    console.log(lugares.costo);
+   
+        console.log(lugar.costo);
         
  });
     
