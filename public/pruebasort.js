@@ -9,7 +9,6 @@ let cargarLugares = () => {
     $.getJSON(url, function (response) {
         console.log(response); //con esto me da la cantidad de objetos.
         let lugares = response;
-        console.log(lugares[1]);
         mostrarLugares(lugares);
 
 
@@ -69,7 +68,8 @@ let filtrarContactos= ()=>{
 }
 
 var plantillaReserva =
-    '<section class="uk-container uk-margin-large" id="detailEvent">' +
+    '<section class="uk-container uk-margin-large" id="detailEvent">' 
+    +
     '<h1 class="text-gray">__nombre__</h1>' +
     '<div class="uk-grid-divider uk-child-width-expand@s" uk-grid>' +
     '<div class="uk-align-center">' +
