@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var cargarPagina = function () {
     mastraEvnetoF    ();
     obtenerEventos();
@@ -5,6 +6,12 @@ var cargarPagina = function () {
     $("#mostrar-result").click(buscarD);
 
 
+=======
+var cargarPagina = function () {    
+    mastraEvnetoF();
+    obtenerEventos();
+    $("#mostrar-busqueda").click(searEvent);      
+>>>>>>> upstream/master
 };
 var eventos = [];
 var plantillaEvent =
@@ -39,15 +46,15 @@ var obtenerEventos = function () {
 
 
 };
-var mostrarEvent = function (events) {
-    var plantillaFinal2 = "";
-	events.forEach(function (event) {
-        plantillaFinal2 += plantillaEvent.replace("__nombre__", event.nombre)
-        .replace("__descripcion__", event.descripcion)
-        .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
-	});
-	$("#contenido_busqueda").html(plantillaFinal2);
-};
+    var mostrarEvent = function (events) {
+        var plantillaFinal2 = "";
+        events.forEach(function (event) {
+            plantillaFinal2 += plantillaEvent.replace("__nombre__", event.nombre)
+            .replace("__descripcion__", event.descripcion)
+            .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
+        });
+        $("#contenido_busqueda").html(plantillaFinal2);
+    };
 var filtrarEventos = function (e) {
     e.preventDefault();
     var criterioBusqueda = $("#search").val().toLowerCase();
@@ -58,7 +65,6 @@ var filtrarEventos = function (e) {
 };
 var mostrarEventF = function (event) {
     var plantillaFinal = "";
-    console.log(event);
          plantillaFinal +=  plantillaEvent.replace("__nombre__", event.nombre)
          .replace("__descripcion__", event.descripcion)
          .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
@@ -68,23 +74,13 @@ var mostrarEventF = function (event) {
 var mastraEvnetoF = function () {
     var evento =JSON.parse(localStorage.getItem("lastname"));
     var data =evento[0];
-    console.log(mostrarEventF(data));
+    mostrarEventF(data);
 };
-var filtroEdades = function (e) {
-    e.preventDefault();
-    var criterioBusqueda = $("#select-edad").val();
-    console.log(criterioBusqueda);
-    var eventosFiltrados = eventos.filter(function (evento) {
-        return evento.edad.indexOf(criterioBusqueda) >= 0;
-    });
-}
+
 function searEvent() {
-    mostrarEvent(eventos);
+    mostrarEvent(eventos);  
 }
-function buscarD(e) {
-    e.preventDefault();
-    filtrarEdades();
-}
+
 
 
 $(document).ready(cargarPagina);
