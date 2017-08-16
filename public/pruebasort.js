@@ -63,7 +63,7 @@ let prevent = (e) => { //prevenir recarga de pagina
 }
 
 let filtrarContactos= ()=>{
-    let filtro = cargarLugares.filter(function (cargarLugares) {
+    let filtro = .filter(function (cargarLugares) {
 		return cargarLugares.nombre.toLowerCase().indexOf($busqueda) >= 0;
 });
 }
