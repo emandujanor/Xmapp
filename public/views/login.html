@@ -22,7 +22,7 @@
       	<article class="uk-grid uk-child-width-1-2@m uk-child-width-1-1@s uk-padding  uk-padding-remove-top" uk-grid>
           <form class="uk-flex-center uk-flex-middle uk-flex uk-padding-large uk-padding-remove-bottom uk-padding-remove-top">
               <div>
-                 <button class="uk-button uk-button-default uk-width-1-1@s uk-margin-bottom fb-login color-facebook text-white">
+                 <button id="go-face" class="uk-button uk-button-default uk-width-1-1@s uk-margin-bottom fb-login color-facebook text-white">
                    <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook
                  </button>
                  <button id="go-login1" class="uk-button uk-button-default uk-width-1-1@s uk-margin-small-bottom go-login color-google text-white">
@@ -31,17 +31,22 @@
               </div>
           </form>
           <form  id="regist" class="uk-padding-large uk-padding-remove-bottom uk-padding-remove-top">
-               <input type="text" placeholder="Usuario" class="uk-input uk-width-1-1@s"><br>
-               <input type="password" placeholder="Contraseña" class="uk-input uk-margin-top uk-width-1-1@s">
+               <input type="text" id="usuarios" placeholder="Usuario" class="uk-input uk-width-1-1@s"><br>
+               <input type="password" id="contraseña" placeholder="Contraseña" class="uk-input uk-margin-top uk-width-1-1@s">
                <div>
-                 <a href="views/home.html" id="login" class="uk-button uk-button-primary uk-width-1-1@s uk-margin-small-bottom uk-margin-top" > Iniciar sesión</a>
+                 <a href="#" id="login" class="uk-button uk-button-primary uk-width-1-1@s uk-margin-small-bottom uk-margin-top" > Iniciar sesión</a>
                </div>
           </form>
       	</article>
         <div class="uk-text-center uk-text-lead">
-          <a href="registro.html" target="_self">Registrate</a>
+          <a id="registro" href="#" target="_self">Registrate</a>
         </div>
     </section>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/login.js"></script>
+
 
   </body>
 </html>

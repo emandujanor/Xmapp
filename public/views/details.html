@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>X-mapp</title>
+    <link rel="icon" sizes="16x16" href="../assets/img/xmapp.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+<!-- NAVBAR     -->
+    <nav id="nav" class="uk-navbar-container" uk-navbar>
+         <img src="../assets/img/xmapp_logo.png" alt="logo" class="uk-align-left logo">
+         <div class="uk-navbar-right">
+             <ul class="uk-navbar-nav">
+                 <span class="name">Nombre del Usuario </span>
+                 <li>
+                     <a href="#"><div id="avatar"></div></a>
+                     <div class="color-black uk-navbar-dropdown">
+                         <ul class="uk-nav uk-navbar-dropdown-nav text-white">
+                            <li><a href="#">Iniciar Sesión</a></li>
+                             <li><a href="#">Registrate</a></li>
+                         </ul>
+                     </div>
+                 </li>
+             </ul>
+         </div>
+     </nav>
+<!-- DETAILS    -->
+    <section class="uk-container uk-margin-large" id="detailEvent">
+      <h1 class="text-gray">Paracaidismo</h1>
+      <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+        <div class="uk-align-center">
+          <img src="../assets/img/utah-95032_1920.jpg" alt="">
+        </div>
+        <div>
+          <div class="uk-child-width-expand@s uk-margin-medium-top" uk-grid>
+            <p><b>FECHA:</b> 04/MAY/2017</p>
+            <p><b>COSTO:</b> 2,600.00</p>
+            <p><b>EDAD:</b>18 años</p>
+          </div>
+          <p><b>UBICACIÓN:</b>"Carretera Cuautla-Huitzililla, Aerodromo de Cuautla"</p>
+          <p>DESCRIPCIÓN: 60 segundos de caída libre a 200 Km/h desde 17.000 pies snm (sobre el nivel del mar), después diviértete de 5 a 7 minutos en tu vuelo con paracaídas mientras disfrutas de la vista que Skydive Cuautla tiene para tí.</p>
+          <button id="reservation" class="uk-button color-red text-white uk-margin-large uk-align-right" type="button" uk-toggle="target: #modal-reservation">Reservar</button>
+        </div>
+      </div>
+    </section>
+
+<!-- MODAL RESERVATION -->
+    <section id="modal-reservation" uk-modal>
+    	<div class="uk-modal-body">
+    		<button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-text-center uk-heading-line uk-margin-large uk-margin-remove-bottom">
+          <h2 class="text-white">Reserva está aventura</h2>
+        </div>
+    		<form class="text-white uk-padding-large">
+          <div class="uk-flex uk-flex-center">
+            <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+              <div>
+        				<span uk-icon="icon: user" class="uk-margin-right"></span><input class="uk-input uk-form-width-medium" type="text" placeholder="Nombre">
+        			</div>
+        			<div>
+        				<span uk-icon="icon: mail" class="uk-margin-right"></span><input class="uk-input uk-form-width-medium" type="text" placeholder="Email">
+        			</div>
+        			<div class="uk-margin-medium-top">
+        				<span uk-icon="icon: phone" class="uk-margin-right"></span><input class="uk-input uk-form-width-medium" type="text" placeholder="Teléfono">
+        			</div>
+              <div class="uk-margin-medium-top">
+                <div class="uk-form-controls">
+                  <span uk-icon="icon: calendar" class="uk-margin-right"></span>
+                    <select class="uk-select uk-form-width-medium" id="form-horizontal-select">
+                        <option>Fecha 1</option>
+                        <option>Fecha 2</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+
+            <div id="people">
+                <div class="uk-form-controls">
+                  <div class="uk-grid">
+                    <label><input class="uk-radio" type="radio" name="radio1"> Adultos</label><br>
+                    <div class="uk-form-controls">
+                        <select class="uk-select uk-form-width-small" id="form-horizontal-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="uk-grid">
+                    <label><input class="uk-radio" type="radio" name="radio2"> Niños  </label>
+                    <div class="uk-form-controls">
+                        <select class="uk-select uk-form-width-small" id="form-horizontal-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <button class="uk-button color-green text-white uk-margin-large uk-align-center " type="button" uk-toggle="target: #modal-reservation"  >Reservar</button>
+		    </form>
+    </div>
+  </section>
+
+<!-- COMMENT -->
+    <section class="uk-comment uk-container uk-margin-large">
+        <article class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar" src="../assets/img/avatar.jpg" alt="people">
+            </div>
+            <div class="uk-width-expand@s">
+                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Nombre</a></h4>
+                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li><a href="#">Hace 12 días</a></li>
+                    <li><a href="#">Responder</a></li>
+                    <li>
+                      <div class="test-upload" uk-form-custom>
+                          <input type="file" multiple>
+                          <button class="uk-button uk-button-default color-green" type="button" tabindex="-1">Subir foto</button>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <div class="uk-comment-body">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+    </section>
+    <section class="uk-comment uk-container uk-margin-large">
+        <article class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar" src="../assets/img/avatar.jpg" alt="people">
+            </div>
+            <div class="uk-width-expand@s">
+                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Nombre</a></h4>
+                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li><a href="#">Hace 12 días</a></li>
+                    <li><a href="#">Responder</a></li>
+                    <li>
+                      <div class="test-upload"  uk-form-custom>
+                          <input type="file" multiple>
+                          <button class="uk-button uk-button-default color-green" type="button" tabindex="-1">Subir foto</button>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <div class="uk-comment-body">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+    <footer id="footer" class="color-gray">
+    	<div class="columna">
+        <ul class="text-white uk-margin-medium-top">
+            <li class="text-white">SERVICIO AL CLIENTE</li>
+            <li><a class="text-white uk-text-meta">Preguntas Frecuentes</a></li>
+            <li><a class="text-white">Garantía de Servicio</a></li>
+        </ul>
+        </div>
+        <div class="columna">
+        <ul class="text-white uk-margin-medium-top">
+          <li class="text-white uk-text-meta">POLITICAS</li>
+          <li><a class="text-white">Terminos y Condiciones</a></li>
+          <li><a class="text-white">Privacidad</a></li>
+        </ul>
+       </div>
+        <div class="columna">
+            <div class="social-media uk-margin-medium-top uk-align-center">
+                <a href="#" uk-icon="icon: twitter; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+                <a href="#" uk-icon="icon: facebook; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+                <a href="#" uk-icon="icon: youtube; ratio: 1" class="uk-icon-button uk-margin-small-right"></a>
+            </div>
+        </div>
+        <div class="limpiar"> </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+  </body>
+</html>
