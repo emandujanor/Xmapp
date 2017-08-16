@@ -19,7 +19,7 @@
              <ul class="uk-navbar-nav">
                  <span class="name">¡Hola! Ana</span>
                  <li>
-                     <a href="#"><div id="avatar"></div></a>
+                     <a href="#"><div id="avatar-singup"></div></a>
                      <div class="color-black uk-navbar-dropdown">
                          <ul class="uk-nav uk-navbar-dropdown-nav text-white">
                             <li><a href="../index.html">Cerrar Sesión</a></li>
@@ -31,7 +31,7 @@
      </nav>
 <!-- DETAILS    -->
     <section class="uk-container uk-margin-large" id="detailEvent">
-      <h1 class="text-gray">Paracaidismo</h1>
+      <h1 class="text-gray">Ciclismo Down Hill</h1>
       <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
         <div class="uk-align-center">
           <img src="../assets/img/utah-95032_1920.jpg" alt="">
@@ -39,11 +39,12 @@
         <div>
           <div class="uk-child-width-expand@s uk-margin-medium-top" uk-grid>
             <p><b>FECHA:</b> 04/MAY/2017</p>
-            <p><b>COSTO:</b> 2,600.00</p>
-            <p><b>EDAD:</b>18 años</p>
+            <p><b>COSTO:</b> $100.00</p>
+            <p><b>EDAD:</b> 8 años</p>
           </div>
-          <p><b>UBICACIÓN:</b>Carretera Cuautla-Huitzililla, Aerodromo de Cuautla</p>
-          <p><b>DESCRIPCIÓN:</b> 60 segundos de caída libre a 200 Km/h desde 17.000 pies snm (sobre el nivel del mar), después diviértete de 5 a 7 minutos en tu vuelo con paracaídas mientras disfrutas de la vista que Skydive Cuautla tiene para tí.</p>
+          <p><b>UBICACIÓN:</b> Parque de los Dinamos</p>
+          <p><b>DESCRIPCIÓN:</b> En la zona de los Dinamos, delegación Magdalena Contreras, se puede practicar el ciclismo de montaña en la modalidad de descenso, conocida como Down Hill.
+            Un grupo de aficionados se reúne todos los fines de semana para descender por dos pistas adaptadas dentro del importante parque con curvas peraltadas, rampas, etc, en un descenso de tres kilómetros que se hace en tan solo cinco minutos</p>
           <button id="reservation" class="uk-button color-red text-white uk-margin-large uk-align-right" type="button" uk-toggle="target: #modal-reservation">Reservar</button>
         </div>
       </div>
@@ -130,14 +131,14 @@
                     <li>
                       <div class="test-upload" uk-form-custom>
                           <input type="file" multiple>
-                          <button class="uk-button uk-button-default color-red" type="button" tabindex="-1">Subir foto</button>
+                          <button class="uk-button uk-button-default color-red text-white" id="upload" type="button" tabindex="-1">Subir foto</button>
                       </div>
                     </li>
                 </ul>
             </div>
         </article>
         <div class="uk-comment-body">
-            <p><i>“Muy buena experiencia en deportes extremos”.</i> Con una hermosa vista</p>
+            <p><i>“Muy buena experiencia en deportes extremos”.</i> Con una mucha adrenalina.</p>
         </div>
     </section>
 
@@ -171,5 +172,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+  	<script src="../js/alert.js"></script>
   </body>
 </html>

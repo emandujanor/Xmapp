@@ -1,51 +1,50 @@
 var cargarPagina = function () {    
-    mastraEvnetoF
-    ();
+    mastraEvnetoF();
     obtenerEventos();
-	
+    $("#mostrar-busqueda").click(searEvent);      
 };
 var eventos = [];
 var plantillaEvent =
 '<div class="key-reserva" data-key="__key__">'+
   '<div class="uk-card uk-card-default uk-card-hover">'+
     '<div class="uk-card-header">'+
-        '<div class="uk-grid-small uk-flex-middle" uk-grid>'+
-            '<div class="uk-width-auto">'+
+        '<div class="uk-align-center">'+
+            '<div class="uk-text-center uk-margin-bottom">'+
                 '<img  width="140" height="140" src="__imagen__">'+
             '</div>'+
-            '<div class="uk-width-expand">'+
+            '<div>'+
               '<h3 class="uk-card-title uk-margin-remove-bottom">__nombre__</h3>'+
-              '<p class="uk-text-meta uk-margin-remove-top">$__fecha__</p>'+
+              '<p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">__fecha__</p>'+
             '</div>'+
-        '</div>'+
+         '</div>'+
     '</div>'+
     '<div class="uk-card-body">'+
        ' <p>__descripcion__</p>'+
     '</div>'+
    '<div class="uk-card-footer">'+
-        '<a class="boton-reserva" href="#" class="uk-button uk-button-text text-blue">Leer más</a>'+
+        '<a class="boton-reserva" href="details.html" class="uk-button uk-button-text text-blue">Leer más</a>'+
     '</div>'+
   '</div>'+
 '</div>';
 var obtenerEventos = function () {
     $.get("https://x-app-a4675.firebaseio.com/actividades.json", function(data, status){
-        var activities = data;                
+        var activities = data;
         $.each(activities, function(key,val) {
             eventos.push(val);
         });
-        
-    });   
-    
+    });
+
+
 };
-var mostrarEvent = function (events) {
-    var plantillaFinal = "";
-	events.forEach(function (event) {
-        plantillaFinal += plantillaBusquedaEvent.replace("__nombre__", event.nombre)
-        .replace("__descripcion__", event.descripcion)
-        .replace("__imagen__", event.costo);
-	});
-	$("#contenido_busqueda").html(plantillaFinal);
-};
+    var mostrarEvent = function (events) {
+        var plantillaFinal2 = "";
+        events.forEach(function (event) {
+            plantillaFinal2 += plantillaEvent.replace("__nombre__", event.nombre)
+            .replace("__descripcion__", event.descripcion)
+            .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
+        });
+        $("#contenido_busqueda").html(plantillaFinal2);
+    };
 var filtrarEventos = function (e) {
     e.preventDefault();
     var criterioBusqueda = $("#search").val().toLowerCase();
@@ -56,16 +55,22 @@ var filtrarEventos = function (e) {
 };
 var mostrarEventF = function (event) {
     var plantillaFinal = "";
-    console.log(event);    
          plantillaFinal +=  plantillaEvent.replace("__nombre__", event.nombre)
          .replace("__descripcion__", event.descripcion)
          .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
-	 
+
 	 $("#contenido_busqueda").html(plantillaFinal);
 };
 var mastraEvnetoF = function () {
-    var evento =JSON.parse(localStorage.getItem("lastname"));   
+    var evento =JSON.parse(localStorage.getItem("lastname"));
     var data =evento[0];
-    console.log(mostrarEventF(data));
+    mostrarEventF(data);
+};
+
+function searEvent() {
+    mostrarEvent(eventos);  
 }
+
+
+
 $(document).ready(cargarPagina);
