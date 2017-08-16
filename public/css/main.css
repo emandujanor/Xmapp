@@ -75,17 +75,55 @@ body{
 form{
   border-radius: 20px;
 }
+.no-scroll{
+  overflow: hidden;
+}
 #bg-home {
   background-image: url("../assets/img/landscape-2082827_1920.jpg");
 }
-#login:hover{
+#bg-register{
+  background-image: url("../assets/img/fdo_mont.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+#login:hover, #continue:hover, #reservation:hover{
   background: transparent;
   border: 1px solid #4f544f;
   color: #4f544f;
 }
+#nav{
+background-color:#000;
+color:#fff;
+border-bottom: solid 5px #FF0000;
+}
+.columna{
+	width:28%;
+	height:auto;
+	margin-left:5vw;
+	float:left;
+	display:inline-block;
+}
+
+.limpiar{
+	clear:both;
+	margin-bottom:2wh;
+}
+footer>div>ul>li{
+	list-style:none;
+}
+
+/*MEDIA QUERY*/
 @media (max-width: 420px){
   .img-small {
     width: 100%;
+  }
+  .columna{
+  	width:80vw;
+  	height:auto;
+  	margin-left:15vw;
+  	float:left;
+  	display:inline-block;
   }
 }
 @media (min-width: 640px){
@@ -104,36 +142,6 @@ form{
     margin: 0 10%;
   }
 }
-
-#nav{
-background-color:#000;
-color:#fff;
-border-bottom: solid 5px #FF0000;
-}
-.columna{
-	width:28%;
-	height:auto;
-	margin-left:5vw;
-	float:left;
-	display:inline-block;
-}
-@media (max-width: 420px){
-.columna{
-	width:80vw;
-	height:auto;
-	margin-left:15vw;
-	float:left;
-	display:inline-block;
-}
-}
-.limpiar{
-	clear:both;
-	margin-bottom:2wh;
-}
-footer>div>ul>li{
-	list-style:none;
-}
-
 @media (max-width: 780px){
   .img-small {
     width: 25%;
@@ -144,4 +152,3 @@ footer>div>ul>li{
     width: 100%;
   }
 }
-
