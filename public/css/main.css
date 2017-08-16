@@ -34,7 +34,7 @@ body{
   color: #838783;
 }
 .opacity-dark{
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, .8);
 }
 .img-small{
   width: 15%;
@@ -55,6 +55,13 @@ body{
  height:60px;
  background-image: url("../assets/img/avatar.png");
 
+}
+#avatar-singup{
+ width: 60px;
+ height:60px;
+ background-image: url("../assets/img/avatar.jpg");
+ background-size: cover;
+  border-radius: 50%;
 }
 #avatar:hover{
  background-image: url("../assets/img/avatar_over.png");
