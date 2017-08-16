@@ -39,6 +39,9 @@ body{
 .img-small{
   width: 15%;
 }
+.img-xsmall{
+  width: 10%;
+}
 .uk-padding-large{
   padding: 10%;
 }
@@ -81,16 +84,19 @@ form{
 #bg-home {
   background-image: url("../assets/img/landscape-2082827_1920.jpg");
 }
-#bg-register{
+#bg-register, #bg-login{
   background-image: url("../assets/img/fdo_mont.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: bottom right;
 }
 #login:hover, #continue:hover, #reservation:hover{
   background: transparent;
   border: 1px solid #4f544f;
   color: #4f544f;
+}
+#reservation-modal:hover{
+  background: #000;
 }
 #nav{
 background-color:#000;
