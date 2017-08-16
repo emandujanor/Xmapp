@@ -44,7 +44,6 @@ var mostrarEvent = function (events) {
             var eventosFiltrados = eventos.filter(function (evento) {
                 return evento.nombre.toLowerCase().indexOf(criterioBusqueda) >= 0;
             });
-            console.log(eventosFiltrados)
             localStorage.setItem("lastname", JSON.stringify(eventosFiltrados));
             location.href = "/views/search.html";
         };
