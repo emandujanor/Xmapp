@@ -17,13 +17,12 @@
          <img src="../assets/img/xmapp_logo.png" alt="logo" class="uk-align-left logo">
          <div class="uk-navbar-right">
              <ul class="uk-navbar-nav">
-                 <span class="name">Nombre del Usuario </span>
+                 <span class="name">¡Hola! Ana</span>
                  <li>
                      <a href="#"><div id="avatar"></div></a>
                      <div class="color-black uk-navbar-dropdown">
                          <ul class="uk-nav uk-navbar-dropdown-nav text-white">
-                            <li><a href="#">Iniciar Sesión</a></li>
-                             <li><a href="#">Registrate</a></li>
+                            <li><a href="../index.html">Cerrar Sesión</a></li>
                          </ul>
                      </div>
                  </li>
@@ -43,8 +42,8 @@
             <p><b>COSTO:</b> 2,600.00</p>
             <p><b>EDAD:</b>18 años</p>
           </div>
-          <p><b>UBICACIÓN:</b>"Carretera Cuautla-Huitzililla, Aerodromo de Cuautla"</p>
-          <p>DESCRIPCIÓN: 60 segundos de caída libre a 200 Km/h desde 17.000 pies snm (sobre el nivel del mar), después diviértete de 5 a 7 minutos en tu vuelo con paracaídas mientras disfrutas de la vista que Skydive Cuautla tiene para tí.</p>
+          <p><b>UBICACIÓN:</b>Carretera Cuautla-Huitzililla, Aerodromo de Cuautla</p>
+          <p><b>DESCRIPCIÓN:</b> 60 segundos de caída libre a 200 Km/h desde 17.000 pies snm (sobre el nivel del mar), después diviértete de 5 a 7 minutos en tu vuelo con paracaídas mientras disfrutas de la vista que Skydive Cuautla tiene para tí.</p>
           <button id="reservation" class="uk-button color-red text-white uk-margin-large uk-align-right" type="button" uk-toggle="target: #modal-reservation">Reservar</button>
         </div>
       </div>
@@ -52,111 +51,93 @@
 
 <!-- MODAL RESERVATION -->
     <section id="modal-reservation" uk-modal>
-    	<div class="uk-modal-body">
+    	<div class="uk-modal-body uk-padding-large uk-padding-remove-top uk-padding-remove-bottom">
     		<button class="uk-modal-close-default" type="button" uk-close></button>
         <div class="uk-text-center uk-heading-line uk-margin-large uk-margin-remove-bottom">
           <h2 class="text-white">Reserva está aventura</h2>
         </div>
     		<form class="text-white uk-padding-large">
-          <div class="uk-flex uk-flex-center">
             <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
-              <div>
-        				<span uk-icon="icon: user" class="uk-margin-right"></span><input class="uk-input uk-form-width-medium" type="text" placeholder="Nombre">
-        			</div>
-        			<div>
-        				<span uk-icon="icon: mail" class="uk-margin-right"></span><input class="uk-input uk-form-width-medium" type="text" placeholder="Email">
-        			</div>
-        			<div class="uk-margin-medium-top">
-        				<span uk-icon="icon: phone" class="uk-margin-right"></span><input class="uk-input uk-form-width-medium" type="text" placeholder="Teléfono">
-        			</div>
-              <div class="uk-margin-medium-top">
-                <div class="uk-form-controls">
-                  <span uk-icon="icon: calendar" class="uk-margin-right"></span>
-                    <select class="uk-select uk-form-width-medium" id="form-horizontal-select">
-                        <option>Fecha 1</option>
-                        <option>Fecha 2</option>
-                    </select>
+                <div>
+                  <div>
+            				<span uk-icon="icon: user" class="uk-margin-right"></span>
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Nombre">
+            			</div>
+                  <div class="uk-margin-medium-top">
+            				<span uk-icon="icon: mail" class="uk-margin-right"></span>
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Email">
+            			</div>
+                  <div class="uk-margin-medium-top">
+            				<span uk-icon="icon: phone" class="uk-margin-right"></span>
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Teléfono">
+            			</div>
                 </div>
-              </div>
-            </div>
 
-            <div id="people">
-                <div class="uk-form-controls">
-                  <div class="uk-grid">
-                    <label><input class="uk-radio" type="radio" name="radio1"> Adultos</label><br>
-                    <div class="uk-form-controls">
-                        <select class="uk-select uk-form-width-small" id="form-horizontal-select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                <div id="people">
+                    <div>
+                      <div class="uk-form-controls">
+                        <span uk-icon="icon: calendar" class="uk-margin-right"></span>
+                          <select class="uk-select uk-form-width-medium" id="form-horizontal-select">
+                              <option>Fecha 1</option>
+                              <option>Fecha 2</option>
+                          </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="uk-grid">
-                    <label><input class="uk-radio" type="radio" name="radio2"> Niños  </label>
-                    <div class="uk-form-controls">
-                        <select class="uk-select uk-form-width-small" id="form-horizontal-select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
+                    <div class="uk-form-controls uk-margin-medium-top">
+                      <div class="uk-grid">
+                        <label><input class="uk-radio" type="radio" name="radio1"> Adultos</label><br>
+                        <div class="uk-form-controls">
+                            <select class="uk-select uk-form-width-small" id="form-horizontal-select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="uk-grid">
+                        <label><input class="uk-radio" type="radio" name="radio2"> Niños  </label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select uk-form-width-small" id="form-horizontal-select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                      </div>
                     </div>
-                  </div>
                 </div>
             </div>
-          </div>
-          <button class="uk-button color-green text-white uk-margin-large uk-align-center " type="button" uk-toggle="target: #modal-reservation"  >Reservar</button>
+          <button id="reservation-modal"class="uk-button color-red text-white uk-margin-large uk-align-center " type="button" uk-toggle="target: #modal-reservation" >Reservar</button>
 		    </form>
-    </div>
   </section>
 
 <!-- COMMENT -->
     <section class="uk-comment uk-container uk-margin-large">
+        <div class=" title uk-text-left uk-heading-line uk-padding-large uk-padding-remove-top  uk-padding-remove-bottom">
+          <h2 class="texto">COMENTARIOS</h2>
+        </div>
         <article class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
+            <div class="uk-width-auto img-xsmall">
                 <img class="uk-comment-avatar" src="../assets/img/avatar.jpg" alt="people">
             </div>
             <div class="uk-width-expand@s">
-                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Nombre</a></h4>
+                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Paulina</a></h4>
                 <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
                     <li><a href="#">Hace 12 días</a></li>
                     <li><a href="#">Responder</a></li>
                     <li>
                       <div class="test-upload" uk-form-custom>
                           <input type="file" multiple>
-                          <button class="uk-button uk-button-default color-green" type="button" tabindex="-1">Subir foto</button>
+                          <button class="uk-button uk-button-default color-red" type="button" tabindex="-1">Subir foto</button>
                       </div>
                     </li>
                 </ul>
             </div>
         </article>
         <div class="uk-comment-body">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        </div>
-    </section>
-    <section class="uk-comment uk-container uk-margin-large">
-        <article class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-                <img class="uk-comment-avatar" src="../assets/img/avatar.jpg" alt="people">
-            </div>
-            <div class="uk-width-expand@s">
-                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Nombre</a></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                    <li><a href="#">Hace 12 días</a></li>
-                    <li><a href="#">Responder</a></li>
-                    <li>
-                      <div class="test-upload"  uk-form-custom>
-                          <input type="file" multiple>
-                          <button class="uk-button uk-button-default color-green" type="button" tabindex="-1">Subir foto</button>
-                      </div>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <div class="uk-comment-body">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p><i>“Muy buena experiencia en deportes extremos”.</i> Con una hermosa vista</p>
         </div>
     </section>
 
