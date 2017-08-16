@@ -56,6 +56,7 @@ function initMap() {
       var markerCluster = new MarkerClusterer(map, lugar,
         {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
+        
   }
 //   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCze7uMn_qigLWe16belwal9difq6ZqJwQ"
 //   async defer></script>            
