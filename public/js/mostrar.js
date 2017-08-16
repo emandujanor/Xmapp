@@ -4,6 +4,7 @@ var cargarPagina = function () {
     $("#mostrar-busqueda").click(searEvent);
     $("#mostrar-result").click(buscarD);
 	
+
 };
 var eventos = [];
 var plantillaEvent =
@@ -24,19 +25,19 @@ var plantillaEvent =
        ' <p>__descripcion__</p>'+
     '</div>'+
    '<div class="uk-card-footer">'+
-        '<a class="boton-reserva" href="#" class="uk-button uk-button-text text-blue">Leer más</a>'+
+        '<a class="boton-reserva" href="details.html" class="uk-button uk-button-text text-blue">Leer más</a>'+
     '</div>'+
   '</div>'+
 '</div>';
 var obtenerEventos = function () {
     $.get("https://x-app-a4675.firebaseio.com/actividades.json", function(data, status){
-        var activities = data;                
+        var activities = data;
         $.each(activities, function(key,val) {
             eventos.push(val);
-        });
-    
+        });    
     });     
      
+
 };
 var mostrarEvent = function (events) {
     var plantillaFinal2 = "";
@@ -57,15 +58,15 @@ var filtrarEventos = function (e) {
 };
 var mostrarEventF = function (event) {
     var plantillaFinal = "";
-    console.log(event);    
+    console.log(event);
          plantillaFinal +=  plantillaEvent.replace("__nombre__", event.nombre)
          .replace("__descripcion__", event.descripcion)
          .replace("__imagen__", event.imagen).replace("__fecha__",event.costo);
-	 
+
 	 $("#contenido_busqueda").html(plantillaFinal);
 };
 var mastraEvnetoF = function () {
-    var evento =JSON.parse(localStorage.getItem("lastname"));   
+    var evento =JSON.parse(localStorage.getItem("lastname"));
     var data =evento[0];
     console.log(mostrarEventF(data));
 };
@@ -85,4 +86,6 @@ function buscarD(e) {
     filtrarEdades();
 }
 
+
 $(document).ready(cargarPagina);
+
