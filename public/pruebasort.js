@@ -8,9 +8,10 @@ const $busqueda = $("#search").val().toLowerCase();
 let cargarLugares =  () => {
     $.getJSON(url, function (response) {
         console.log(response); //con esto me da la cantidad de objetos.
-        let lugar = response;
-        console.log(lugar[1]);
-        mostrarLugares(lugar);
+        let lugares = response;
+        console.log(lugares[1]);
+        mostrarLugares(lugares);
+        
 
 
     });
@@ -18,27 +19,61 @@ let cargarLugares =  () => {
 };
 
 
-let mostrarLugares = (lugar)=>{
-    lugar.forEach((valor, index)=>{
-        console.log(valor, index);
-    })
+let mostrarLugares = (lugares)=>{
+    let plantillaFinal = " ";
+    lugares.forEach((lugar, index)=>{
+        plantillaFinal += plantillaReserva.replace("__nombre__",lugar.nombre)
+        .replace("__costo__",lugar.costo).replace("__direccion__",lugar.direccion).replace("__edad__",lugar.edad);
+        
+        
+    console.log(lugares.costo);
+        
+ });
+    
+    $("#busquedaCont").html(plantillaFinal);
 }
 
 let cargar = () => {
-    $form.submit(filtrarLugares);
+    $form.submit(prevent);
     cargarLugares();
+    mostrarLugares();
 
 
 }
 
 
 
-let filtrarLugares = (e) => {
+
+let prevent = (e) => {  //prevenir recarga de pagina 
     e.preventDefault();
-
-
-
+    filtrarContactos();
+    
 }
+
+/*let filtrarContactos= ()=>{
+    let filtro = 
+
+}*/
+
+var plantillaReserva =
+    '<section class="uk-container uk-margin-large" id="detailEvent">'+
+        '<h1 class="text-gray">__nombre__</h1>'+
+        '<div class="uk-grid-divider uk-child-width-expand@s" uk-grid>'+
+            '<div class="uk-align-center">'+
+            '<img src="__imagen__" alt="">'+
+            '</div>'+
+            '<div>'+
+            '<div class="uk-child-width-expand@s uk-margin-medium-top" uk-grid>'+
+                '<p><b>FECHA:</b> 04/MAY/2017</p>'+
+                '<p><b>COSTO:</b> "__costo__"</p>'+
+            '</div>'+
+            '<p><b>UBICACIÓN:"__direccion__"</p>'+
+            '<p>DESCRIPCIÓN:__descripcion__</p>'+
+            '<button class="uk-button color-green text-white uk-margin-large uk-align-right" type="button" uk-toggle="target: #modal-reservation"  >Reservar</button>'+
+           ' </div>'+
+        '</div>'+
+        '</section>';
+
 
 
 
