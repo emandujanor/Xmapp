@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-var cargarPagina = function () {
-    mastraEvnetoF    ();
-    obtenerEventos();
-    $("#mostrar-busqueda").click(searEvent);
-    $("#mostrar-result").click(buscarD);
-
-
-=======
 var cargarPagina = function () {    
     mastraEvnetoF();
     obtenerEventos();
     $("#mostrar-busqueda").click(searEvent);      
->>>>>>> upstream/master
 };
 var eventos = [];
 var plantillaEvent =
