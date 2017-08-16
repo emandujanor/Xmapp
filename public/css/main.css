@@ -1,0 +1,147 @@
+/*COMMON*/
+body{
+  margin-top: 0px;
+  font-family: 'Dosis', sans-serif;
+}
+.color-red{
+  background-color: #d60116;
+}
+.color-black{
+  background-color: #000;
+}
+.color-gray{
+  background-color: #635f5f;
+}
+.color-lightGray{
+  background: #d4d9d8;
+}
+.color-google{
+  background: #DB4337;
+}
+.color-facebook{
+  background: #3B5998;
+}
+.text-white{
+  color: #ffffff;
+}
+.text-red{
+  color: #d60116;
+}
+.text-gray{
+  color: #4f544f;
+}
+.text-lightGray{
+  color: #838783;
+}
+.opacity-dark{
+  background: rgba(0, 0, 0, 0.5);
+}
+.img-small{
+  width: 15%;
+}
+.uk-padding-large{
+  padding: 10%;
+}
+
+/*NAVBAR*/
+.logo{
+ margin: 10px;
+}
+#avatar{
+ width: 60px;
+ height:60px;
+ background-image: url("../assets/img/avatar.png");
+
+}
+#avatar:hover{
+ background-image: url("../assets/img/avatar_over.png");
+}
+.name{
+ margin-top:25px;
+}
+
+/*HOME*/
+#map{
+  height: 30vh;
+  background: gray;
+  padding: 10%;
+}
+.uk-search .uk-search-icon{
+  color: white;
+}
+.uk-search-large .uk-search-input{
+  font-size: 2rem;
+}
+form{
+  border-radius: 20px;
+}
+#bg-home {
+  background-image: url("../assets/img/landscape-2082827_1920.jpg");
+}
+#login:hover{
+  background: transparent;
+  border: 1px solid #4f544f;
+  color: #4f544f;
+}
+@media (max-width: 420px){
+  .img-small {
+    width: 100%;
+  }
+}
+@media (min-width: 640px){
+  #regist .uk-width-1-1\@s {
+      width: 52%;
+      margin-left: 24%;
+  }
+}
+@media (max-width: 736px){
+  .uk-search-large .uk-search-input, .texto{
+    font-size: 1.5em;
+    height: 45px;
+  }
+  .uk-search-large .uk-search-icon{
+    width: 28px;
+    margin: 0 10%;
+  }
+}
+
+#nav{
+background-color:#000;
+color:#fff;
+border-bottom: solid 5px #FF0000;
+}
+.columna{
+	width:28%;
+	height:auto;
+	margin-left:5vw;
+	float:left;
+	display:inline-block;
+}
+@media (max-width: 420px){
+.columna{
+	width:80vw;
+	height:auto;
+	margin-left:15vw;
+	float:left;
+	display:inline-block;
+}
+}
+.limpiar{
+	clear:both;
+	margin-bottom:2wh;
+}
+footer>div>ul>li{
+	list-style:none;
+}
+
+@media (max-width: 780px){
+  .img-small {
+    width: 25%;
+  }
+}
+@media (min-width: 1024px){
+  #regist .uk-width-1-1\@s {
+    width: 100%;
+  }
+}
+
