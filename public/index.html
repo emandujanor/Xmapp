@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-  <script></script>
-   <script src="js/app.js"></script>
-    
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>X-mapp</title>
+    <link rel="icon" sizes="16x16" href="public/assets/img/xmapp.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+    <section id="bg-home" class="uk-background-fixed uk-background-center-center uk-background-cover">
+      <section class="uk-card">
+          <div class="uk-card-body transparent">
+            <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white">
+                <span uk-search-icon class="text-white"></span>
+                <input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
+            </form>
+            <div class="uk-text-center uk-heading-line">
+              <h2 class="text-white">Aventuras cerca de tí</h2>
+            </div>
+            <div class="uk-align-center" >
+              <div>
+                  <div class="uk-card uk-card-hover uk-card-default">
+                      <div class="uk-card-media-top uk-text-center uk-padding">
+                          <img src="../assets/img/scapp_logo.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">Nombre del evento</h3>
+                          <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                      </div>
+                  </div>
+              </div>
+      </section>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+  </body>
 </html>
